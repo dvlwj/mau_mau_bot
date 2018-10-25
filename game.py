@@ -147,8 +147,8 @@ class Game(object):
         to the winner's score."""
         scores = 0
         self.last_round_score.clear()
-        for player in self.players:
-            for card in player.cards:
+        for p in self.players:
+            for card in p.cards:
                 sc = c.CARD_SCORES[card.value or card.special]
                 self.last_round_score.append((sc, card))
                 scores += sc
